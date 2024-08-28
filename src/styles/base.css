@@ -5,20 +5,22 @@
 @layer base {
   :root,
   html[data-theme="light"] {
-    --color-fill: 251, 254, 251;
-    --color-text-base: 40, 39, 40;
-    --color-accent: 0, 108, 172;
-    --color-card: 230, 230, 230;
-    --color-card-muted: 205, 205, 205;
-    --color-border: 236, 233, 233;
+    --color-fill: 245, 239, 224; /* A warm, parchment-like background */
+    --color-text-base: 55, 50, 45; /* Dark brown text for readability */
+    --color-accent: 153, 101, 21; /* Rich, warm brown for accents */
+    --color-card: 235, 229, 214; /* Slightly darker parchment for cards */
+    --color-card-muted: 215, 204, 184; /* Muted beige for secondary elements */
+    --color-border: 204, 192, 169; /* Subtle brown for borders */
   }
+  
+
   html[data-theme="dark"] {
-    --color-fill: 33, 39, 55;
-    --color-text-base: 234, 237, 243;
-    --color-accent: 255, 107, 1;
-    --color-card: 52, 63, 96;
-    --color-card-muted: 138, 51, 2;
-    --color-border: 171, 75, 8;
+    --color-fill: 20, 24, 31; /* Dark, deep background */
+    --color-text-base: 208, 195, 165; /* Light, warm beige text for contrast */
+    --color-accent: 198, 134, 66; /* Warm, rich gold for accents */
+    --color-card: 28, 35, 45; /* Slightly lighter background for cards */
+    --color-card-muted: 53, 62, 73; /* Muted dark blue-gray for secondary elements */
+    --color-border: 102, 85, 63; /* Warm brown for borders */
   }
   #sun-svg,
   html[data-theme="dark"] #moon-svg {
@@ -28,42 +30,85 @@
   html[data-theme="dark"] #sun-svg {
     display: block;
   }
+
   body {
-    @apply flex min-h-[100svh] flex-col bg-skin-fill font-mono text-skin-base selection:bg-skin-accent/70 selection:text-skin-inverted;
+    @apply flex min-h-[100svh] flex-col bg-skin-fill font-serif text-base text-skin-base selection:bg-skin-accent/70 selection:text-skin-inverted;
+    font-size: 1.125rem; /* 18px base font size */
   }
+
+  /* Heading sizes relative to the base font size */
+  h1 {
+    @apply text-4xl font-bold; /* 40px */
+  }
+
+  h2 {
+    @apply text-3xl font-bold; /* 36px */
+  }
+
+  h3 {
+    @apply text-2xl font-semibold; /* 32px */
+  }
+
+  h4 {
+    @apply text-xl font-semibold; /* 24px */
+  }
+
+  h5 {
+    @apply text-lg font-medium; /* 20px */
+  }
+
+  h6 {
+    @apply text-base font-medium; /* 18px */
+  }
+
+  p {
+    @apply text-base; /* Paragraphs use the base size (18px) */
+  }
+
   section,
   footer {
     @apply mx-auto max-w-3xl px-4;
   }
+
   a {
     @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
   }
+
   svg {
     @apply inline-block h-6 w-6 fill-skin-base group-hover:fill-skin-accent;
   }
+
   svg.icon-tabler {
     @apply inline-block h-6 w-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110;
   }
+
+  /* Prose adjustments for rich text content */
   .prose {
     @apply prose-headings:!mb-3 prose-headings:!text-skin-base prose-h3:italic prose-p:!text-skin-base prose-a:!text-skin-base prose-a:!decoration-dashed prose-a:underline-offset-8 hover:prose-a:text-skin-accent prose-blockquote:!border-l-skin-accent/50 prose-blockquote:opacity-80 prose-figcaption:!text-skin-base prose-figcaption:opacity-70 prose-strong:!text-skin-base prose-code:rounded prose-code:bg-skin-card/75 prose-code:p-1 prose-code:before:!content-none prose-code:after:!content-none prose-ol:!text-skin-base prose-ul:overflow-x-clip prose-ul:!text-skin-base prose-li:marker:!text-skin-accent prose-table:text-skin-base prose-th:border prose-th:border-skin-line prose-td:border prose-td:border-skin-line prose-img:!my-2 prose-img:mx-auto prose-img:border-2 prose-img:border-skin-line prose-hr:!border-skin-line;
   }
+
   .prose a {
     @apply break-words hover:!text-skin-accent;
   }
+
   .prose thead th:first-child,
   tbody td:first-child,
   tfoot td:first-child {
     padding-left: 0.5714286em;
   }
+
   .prose h2#table-of-contents {
     @apply mb-2;
   }
+
   .prose details {
     @apply inline-block cursor-pointer select-none text-skin-base;
   }
+
   .prose summary {
     @apply focus-outline;
   }
+
   .prose h2#table-of-contents + p {
     @apply hidden;
   }
@@ -97,6 +142,7 @@
   pre:has(code) {
     @apply border border-skin-line;
   }
+
   code,
   blockquote {
     word-wrap: break-word;
@@ -121,6 +167,7 @@
   .display-none {
     @apply hidden;
   }
+
   .focus-outline {
     @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
   }

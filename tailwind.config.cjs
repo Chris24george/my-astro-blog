@@ -55,9 +55,25 @@ module.exports = {
         transparent: "transparent",
       },
       fontFamily: {
-        mono: ["IBM Plex Mono", "monospace"],
+        serif: ['Georgia', 'serif'], // Set Georgia as the serif font
+        sans: ['Inter', 'sans-serif'], // You can define a sans-serif fallback if needed
+        mono: ['IBM Plex Mono', 'monospace'], // Example mono font
       },
-
+      fontSize: {
+        'xs': '.75rem',   // 12px
+        'sm': '.875rem',  // 14px
+        'base': '1.125rem', // 18px - This is the new default size
+        'lg': '1.25rem',  // 20px
+        'xl': '1.5rem',   // 24px
+        '2xl': '2rem',    // 32px
+        '3xl': '2.25rem', // 36px
+        '4xl': '2.5rem',  // 40px
+        '5xl': '3rem',    // 48px
+        '6xl': '3.75rem', // 60px
+        '7xl': '4.5rem',  // 72px
+        '8xl': '6rem',    // 96px
+        '9xl': '8rem',    // 128px
+      },
       typography: {
         DEFAULT: {
           css: {
