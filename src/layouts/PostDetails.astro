@@ -117,8 +117,7 @@ const layoutProps = {
 </style>
 
 <script is:inline>
-  /** Create a progress indicator
-   *  at the top */
+  /** Create a progress indicator at the top */
   function createProgressBar() {
     const progressContainer = document.createElement("div");
     progressContainer.className = "progress-container fixed top-0 z-10 h-1 w-full bg-skin-fill";
@@ -130,8 +129,7 @@ const layoutProps = {
   }
   createProgressBar();
 
-  /** Update the progress bar
-   *  when user scrolls */
+  /** Update the progress bar when user scrolls */
   function updateScrollProgress() {
     const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -143,8 +141,7 @@ const layoutProps = {
   }
   document.addEventListener("scroll", updateScrollProgress);
 
-  /** Show or hide the floating back to top button
-   *  depending on scroll position */
+  /** Show or hide the floating back to top button depending on scroll position */
   function toggleBackToTopButton() {
     const backToTopButton = document.getElementById("floating-back-to-top");
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
@@ -155,10 +152,14 @@ const layoutProps = {
   }
   document.addEventListener("scroll", toggleBackToTopButton);
 
-  /** Scrolls the document to the top when
-   * the floating "Back to Top" button is clicked. */
-  document.getElementById("floating-back-to-top").addEventListener("click", () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  });
+  /** Scroll to the top when either Back to Top button is clicked */
+  function scrollToTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+  }
+
+  // Attach the scrollToTop function to both buttons
+  document.getElementById("floating-back-to-top")?.addEventListener("click", scrollToTop);
+  document.getElementById("back-to-top")?.addEventListener("click", scrollToTop);
 </script>
+
