@@ -5,11 +5,11 @@ export const SITE: Site = {
   author: "Christopher George",
   profile: "https://satnaing.dev/",
   desc: "A place for me to express various thoughts/threads that I explore in my reading/learning",
-  title: "Christopher's Thoughts",
+  title: "Chris's Thoughts",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
-  postPerPage: 3,
+  postPerPage: 20,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
 };
 

@@ -23,31 +23,21 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <div class="hero-header">
-        <h2>Welcome</h2>
-        <!-- <a
-          target="_blank"
-          href="/rss.xml"
-          class="rss-link"
-          aria-label="rss feed"
-          title="RSS Feed"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="rss-icon">
-            <path
-              d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"
-            ></path>
-            <path
-              d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"
-            ></path>
-            <circle cx="6" cy="18" r="2"></circle>
-          </svg>
-          <span class="sr-only">RSS Feed</span>
-        </a> -->
-      </div>
-    
+      <h2>Welcome</h2>
       <p>
-        Language learning, history, philosophy, classic literature, miscellaneous thoughts. A place for me to express thin.
+        Language learning, history, philosophy, classic literature, miscellaneous thoughts.
       </p>
+      <!-- <br> -->
+      <!-- Call to Action Button for Newsletter -->
+      <!-- <div class="text-center my-5">
+        <a href="/subscribe"
+          class="inline-block px-6 py-3 text-lg font-bold text-white rounded-md transition-colors duration-300"
+          style="background-color: rgb(var(--color-accent));"
+          onmouseover="this.style.backgroundColor='rgba(var(--color-accent), 0.8)';"
+          onmouseout="this.style.backgroundColor='rgb(var(--color-accent))';">
+          Subscribe to Newsletter
+        </a>
+      </div> -->
     
       {socialCount > 0 && (
         <div class="social-wrapper">
@@ -119,10 +109,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   /* ===== Hero Section ===== */
   #hero {
     @apply pb-6 pt-8;
-  }
-
-  .hero-header {
-    @apply flex items-center justify-between; /* Align items horizontally and space them out */
   }
 
   #hero h2 {
