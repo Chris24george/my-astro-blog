@@ -1,11 +1,11 @@
 import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
-  website: "https://astro-paper.pages.dev/", // replace this with your deployed domain
+  website: "https://christonotes.com", // replace this with your deployed domain
   author: "Christopher George",
-  profile: "https://satnaing.dev/",
+  profile: "",
   desc: "A place for me to express various thoughts/threads that I explore in my reading/learning",
-  title: "Chris's Thoughts",
+  title: "Christo Notes",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
@@ -28,39 +28,39 @@ export const LOGO_IMAGE = {
 export const SOCIALS: SocialObjects = [
   {
     name: "Github",
-    href: "https://github.com/satnaing/astro-paper",
+    href: "https://github.com/Chris24george",
     linkTitle: ` ${SITE.title} on Github`,
-    active: false,
+    active: true,
   },
-  {
-    name: "Facebook",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on Facebook`,
-    active: false,
-  },
-  {
-    name: "Instagram",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on Instagram`,
-    active: false,
-  },
-  {
-    name: "LinkedIn",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on LinkedIn`,
-    active: false,
-  },
-  {
-    name: "Mail",
-    href: "mailto:yourmail@gmail.com",
-    linkTitle: `Send an email to ${SITE.title}`,
-    active: false,
-  },
+  // {
+  //   name: "Facebook",
+  //   href: "https://github.com/satnaing/astro-paper",
+  //   linkTitle: `${SITE.title} on Facebook`,
+  //   active: false,
+  // },
+  // {
+  //   name: "Instagram",
+  //   href: "https://github.com/satnaing/astro-paper",
+  //   linkTitle: `${SITE.title} on Instagram`,
+  //   active: false,
+  // },
+  // {
+  //   name: "LinkedIn",
+  //   href: "https://github.com/satnaing/astro-paper",
+  //   linkTitle: `${SITE.title} on LinkedIn`,
+  //   active: false,
+  // },
+  // {
+  //   name: "Mail",
+  //   href: "mailto:yourmail@gmail.com",
+  //   linkTitle: `Send an email to ${SITE.title}`,
+  //   active: false,
+  // },
   {
     name: "Twitter",
-    href: "https://github.com/satnaing/astro-paper",
+    href: "https://x.com/chris24george",
     linkTitle: `${SITE.title} on Twitter`,
-    active: false,
+    active: true,
   },
   {
     name: "Twitch",
