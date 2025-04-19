@@ -172,3 +172,12 @@
     @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
   }
 }
+
+/* Make KaTeX equations smaller on mobile */
+@media (max-width: 768px) {
+  .katex {
+    font-size: 0.9em; /* Adjust as needed */
+    overflow-x: auto; /* Add horizontal scroll if still too wide */
+    display: block; /* Ensure it behaves like a block for overflow */
+  }
+}
