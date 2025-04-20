@@ -6,7 +6,7 @@ export const SITE: Site = {
   profile: "",
   desc: "A place for me to express various thoughts/threads that I explore in my reading/learning",
   title: "Christo Notes",
-  ogImage: "christo-notes-og.jpg",
+  ogImage: "christo-notes-og-v2.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
   postPerPage: 20,
