@@ -56,6 +56,18 @@ async function loadGoogleFonts(
       weight: 700,
       style: "bold",
     },
+    {
+      name: "EB Garamond",
+      font: "EB+Garamond",
+      weight: 400,
+      style: "normal",
+    },
+    {
+      name: "EB Garamond",
+      font: "EB+Garamond:wght@700",
+      weight: 700,
+      style: "bold",
+    },
   ];
 
   const fonts = await Promise.all(
