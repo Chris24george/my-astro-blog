@@ -48,8 +48,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     </section>
     
 
-    <Hr />
-
     {
       featuredPosts.length > 0 && (
         <>
@@ -108,11 +106,15 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 <style>
   /* ===== Hero Section ===== */
   #hero {
-    @apply pb-6 pt-8;
+    @apply pb-6 pt-8 text-center flex flex-col items-center;
+  }
+
+  #hero h2, #hero p, .social-wrapper {
+    @apply text-center mx-auto;
   }
 
   #hero h2 {
-    @apply text-3xl font-bold sm:text-5xl; /* Keep the heading size and style */
+    @apply text-2xl font-semibold sm:text-3xl;
   }
 
   #hero .rss-link {
@@ -139,11 +141,23 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   /* ===== Featured & Recent Posts Sections ===== */
   #featured,
   #recent-posts {
-    @apply pb-6 pt-12;
+    @apply pb-6 pt-10 w-full;
   }
   #featured h2,
   #recent-posts h2 {
-    @apply text-2xl font-semibold tracking-wide;
+    @apply text-center mx-auto;
+  }
+  #featured h2 {
+    @apply text-xl font-semibold tracking-wide mb-2;
+  }
+  #featured > ul, #recent-posts > ul {
+    @apply flex flex-wrap justify-center gap-4 w-full;
+  }
+  #featured ul > li, #recent-posts ul > li {
+    @apply h-64 w-80 max-w-full;
+  }
+  #featured ul > li a, #recent-posts ul > li a {
+    @apply text-left;
   }
   .all-posts-btn-wrapper {
     @apply my-8 text-center;
