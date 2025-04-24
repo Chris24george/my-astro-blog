@@ -23,9 +23,9 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h2>Welcome</h2>
+      <h2 class="max-w-xl mx-auto text-skin-accent">Deep Dives on Language, History, and Ideas</h2>
       <p>
-        Language learning, history, philosophy, classic literature, miscellaneous thoughts.
+        This site is a place for long form essays about language learning, history, philosophy, and other miscellaneous topics that interest me.
       </p>
       <!-- <br> -->
       <!-- Call to Action Button for Newsletter -->
@@ -46,7 +46,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         </div>
       )}
     </section>
-    
+    <Hr />
 
     {
       featuredPosts.length > 0 && (
@@ -106,7 +106,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 <style>
   /* ===== Hero Section ===== */
   #hero {
-    @apply pb-6 pt-8 text-center flex flex-col items-center;
+    @apply pb-3 sm:pb-6 pt-8 text-center flex flex-col items-center;
   }
 
   #hero h2, #hero p, .social-wrapper {
@@ -141,7 +141,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   /* ===== Featured & Recent Posts Sections ===== */
   #featured,
   #recent-posts {
-    @apply pb-6 pt-10 w-full;
+    @apply pb-6 pt-6 sm:pt-10 w-full;
   }
   #featured h2,
   #recent-posts h2 {
