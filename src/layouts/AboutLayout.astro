@@ -1,28 +1,30 @@
 ---
 import { SITE } from "@config";
-import Breadcrumbs from "@components/Breadcrumbs.astro";
-import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
 import Layout from "./Layout.astro";
-
-export interface Props {
-  frontmatter: {
-    title: string;
-    description?: string;
-  };
-}
-
-const { frontmatter } = Astro.props;
+import Main from "./Main.astro";
 ---
 
-<Layout title={`${frontmatter.title} | ${SITE.title}`}>
+<Layout title={`About | ${SITE.title}`}>
   <Header activeNav="about" />
-  <Breadcrumbs />
-  <main id="main-content">
-    <section id="about" class="prose mb-28 max-w-3xl prose-img:border-0">
-      <h1 class="text-2xl tracking-wider sm:text-3xl">{frontmatter.title}</h1>
+  <Main pageTitle="About">
+    <div class="about-content-wrapper">
       <slot />
-    </section>
-  </main>
+    </div>
+  </Main>
   <Footer />
 </Layout>
+
+<style>
+  .about-content-wrapper {
+    @apply mx-auto my-12 max-w-2xl px-4 sm:px-6;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 1.15rem;
+    line-height: 1.8;
+  }
+</style>

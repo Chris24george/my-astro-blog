@@ -5,22 +5,22 @@
 @layer base {
   :root,
   html[data-theme="light"] {
-    --color-fill: 245, 239, 224; /* A warm, parchment-like background */
-    --color-text-base: 55, 50, 45; /* Dark brown text for readability */
-    --color-accent: 153, 101, 21; /* Rich, warm brown for accents */
-    --color-card: 235, 229, 214; /* Slightly darker parchment for cards */
-    --color-card-muted: 215, 204, 184; /* Muted beige for secondary elements */
-    --color-border: 204, 192, 169; /* Subtle brown for borders */
+    --color-fill: 250, 248, 244; /* hsl(40 38% 97%) */
+    --color-text-base: 39, 53, 73; /* hsl(215 30% 22%) */
+    --color-accent: 135, 92, 54; /* hsl(28 43% 37%) */
+    --color-card: 247, 244, 237; /* hsl(39 38% 95%) */
+    --color-card-muted: 237, 232, 222; /* hsl(39 30% 90%) */
+    --color-border: 223, 219, 210; /* hsl(40 17% 85%) */
   }
   
 
   html[data-theme="dark"] {
-    --color-fill: 20, 24, 31; /* Dark, deep background */
-    --color-text-base: 208, 195, 165; /* Light, warm beige text for contrast */
-    --color-accent: 198, 134, 66; /* Warm, rich gold for accents */
-    --color-card: 28, 35, 45; /* Slightly lighter background for cards */
-    --color-card-muted: 53, 62, 73; /* Muted dark blue-gray for secondary elements */
-    --color-border: 102, 85, 63; /* Warm brown for borders */
+    --color-fill: 29, 26, 22; /* hsl(30 15% 10%) */
+    --color-text-base: 237, 232, 222; /* hsl(40 30% 90%) */
+    --color-accent: 209, 149, 97; /* hsl(28 55% 60%) */
+    --color-card: 47, 41, 35; /* hsl(30 15% 16%) */
+    --color-card-muted: 56, 51, 46; /* hsl(30 10% 20%) */
+    --color-border: 70, 64, 57; /* hsl(30 10% 25%) */
   }
   #sun-svg,
   html[data-theme="dark"] #moon-svg {

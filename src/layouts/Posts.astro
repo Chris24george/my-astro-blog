@@ -19,13 +19,15 @@ const { currentPage, totalPages, paginatedPosts } = Astro.props;
 
 <Layout title={`Posts | ${SITE.title}`}>
   <Header activeNav="posts" />
-  <Main pageTitle="Posts" pageDesc="All the articles I've posted.">
-    <ul>
-      {
-        paginatedPosts.map(({ data, slug }) => (
-          <Card href={`/posts/${slug}/`} frontmatter={data} />
-        ))
-      }
+  <Main pageTitle="Posts">
+    <ul class="compact-post-list">
+      {paginatedPosts.map(({ data, slug }) => (
+        <li class="compact-post-item">
+          <a href={`/posts/${slug}/`} class="compact-post-title">{data.title}</a>
+          <span class="compact-post-date">{new Date(data.pubDatetime).toLocaleDateString()}</span>
+          <span class="compact-post-desc">{data.description}</span>
+        </li>
+      ))}
     </ul>
   </Main>
 
@@ -38,3 +40,41 @@ const { currentPage, totalPages, paginatedPosts } = Astro.props;
 
   <Footer noMarginTop={totalPages > 1} />
 </Layout>
+
+<style>
+  .compact-post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .compact-post-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 1.2rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(var(--color-border), 0.5);
+    font-size: 1.08rem;
+  }
+  .compact-post-title {
+    font-weight: 600;
+    color: rgb(var(--color-accent));
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .compact-post-title:hover {
+    color: rgb(var(--color-text-base));
+  }
+  .compact-post-date {
+    font-size: 0.98em;
+    color: rgba(var(--color-text-base), 0.7);
+    font-style: italic;
+    min-width: 6.5em;
+  }
+  .compact-post-desc {
+    flex: 1 1 100%;
+    color: rgba(var(--color-text-base), 0.85);
+    font-size: 0.98em;
+    margin-left: 0.2em;
+  }
+</style>

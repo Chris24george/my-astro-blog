@@ -15,10 +15,19 @@ let tags = getUniqueTags(posts);
 
 <Layout title={`Tags | ${SITE.title}`}>
   <Header activeNav="tags" />
-  <Main pageTitle="Tags" pageDesc="All the tags used in posts.">
-    <ul>
+  <Main pageTitle="Tags">
+    <ul class="tags-list">
       {tags.map(({ tag }) => <Tag {tag} size="lg" />)}
     </ul>
   </Main>
   <Footer />
 </Layout>
+
+<style>
+  .tags-list {
+    @apply flex flex-wrap gap-3 justify-center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+</style>
